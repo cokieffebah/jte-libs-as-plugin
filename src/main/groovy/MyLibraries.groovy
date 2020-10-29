@@ -6,7 +6,7 @@
 package customize_this
 
 import org.boozallen.plugins.jte.init.governance.libs.LibraryProvidingPlugin
-import org.boozallen.plugins.jte.init.governance.libs.LibraryProvidingPlugin.LibraryProvidingPluginDescriptor`
+import org.boozallen.plugins.jte.init.governance.libs.LibraryProvidingPlugin.LibraryProvidingPluginDescriptor
 import hudson.Extension 
 import org.kohsuke.stapler.DataBoundConstructor 
 

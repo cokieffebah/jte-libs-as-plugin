@@ -1,5 +1,5 @@
 plugins {
-  id 'org.jenkins-ci.jpi' version '0.33.0'
+  id 'org.jenkins-ci.jpi' version '0.39.0'
 }
 
 repositories {
@@ -15,7 +15,7 @@ version = '1.0'
 description = 'SDP Pipeline Libraries' 
 
 jenkinsPlugin {
-    coreVersion = '2.121.3'
+    coreVersion = '2.138.3'
     shortName = 'my-custom-libs'
     /*
         the displayName will be what is displayed in the 
@@ -30,12 +30,17 @@ dependencies{
         pin the earliest version of JTE that your libraries depend
         upon
     */  
-    jenkinsPlugins "org.jenkins-ci.plugins:templating-engine:1.4" 
+    compileOnly files("libs/templating-engine-plugin-2.0.jar")
+    jenkinsPlugins "org.jenkins-ci.plugins:templating-engine:2.0" 
 
     ///////////////////////
     // Plugin Dependencies 
     // - add the plugins your libraries depend upon below
     //   following the same syntax as the JTE dependency
     ///////////////////////
-    
+    //implementation 'org.jenkins-ci.plugins.workflow:workflow-multibranch:2.20'
+    //implementation 'org.jenkins-ci.plugins.workflow:workflow-api:2.28'
+    //implementation 'org.jenkins-ci.plugins:branch-api:2.0.20'
+    //implementation 'org.jenkins-ci.plugins:scm-api:2.2.7'
+    //implementation 'org.jenkins-ci.plugins:junit:1.24'    
 }
